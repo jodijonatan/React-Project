@@ -2,10 +2,28 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../data/index";
 
+import { useState, useEffect } from "react";
+
 const NavbarComponent = () => {
+  const [changeColor, setChangeColor] = useState(false);
+
+  const changeBackgroundColor = () => {
+    if (window.scrollY > 10) {
+      setChangeColor(true);
+    } else {
+      setChangeColor(false);
+    }
+  };
+
+  useEffect(() => {
+    changeBackgroundColor();
+
+    window.addEventListener("scroll", changeBackgroundColor);
+  });
+
   return (
     <div>
-      <Navbar expand="lg">
+      <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
         <Container>
           <Navbar.Brand href="#home" className="fs-3 fw-bold">
             JO Dev
@@ -15,7 +33,7 @@ const NavbarComponent = () => {
             <Nav className="mx-auto">
               {navLinks.map((link) => {
                 return (
-                  <div className="nav-link" key={link.id}>
+                  <div className="nav-link text-center" key={link.id}>
                     <NavLink
                       to={link.path}
                       className={({ isActive, isPending }) =>
@@ -30,7 +48,7 @@ const NavbarComponent = () => {
               })}
             </Nav>
 
-            <div>
+            <div className="text-center">
               <button className="btn btn-outline-danger rounded-1">
                 Join With Us
               </button>
