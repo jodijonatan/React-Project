@@ -3,6 +3,7 @@ import HeroImage from "../assets/img/hero.png";
 
 import { kelasTerbaru, dataSwiper } from "../data/index";
 import { useNavigate } from "react-router-dom";
+import FAQComponent from "../components/FAQComponent";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -131,7 +132,7 @@ const Home = () => {
                 return (
                   <SwiperSlide key={data.id} className="shadow-sm">
                     <p className="desc">{data.desc}</p>
-                    <div className="poeple">
+                    <div className="people">
                       <img src={data.image} alt="" />
                       <div>
                         <h5 className="mb-1">{data.name}</h5>
@@ -145,6 +146,10 @@ const Home = () => {
           </Row>
         </Container>
       </div>
+
+      {/* SECTION FOQ */}
+      <FAQComponent />
+      {/* SECTION FOQ */}
     </div>
   );
 };
