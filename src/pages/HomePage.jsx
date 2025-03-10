@@ -30,7 +30,10 @@ const Home = () => {
                 Salah satu siswa Rekayasa Perangkat Lunak dari SMK TELKOM 1
                 MEDAN, nama saya Jodi Jonatan
               </p>
-              <button className="btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2">
+              <button
+                className="btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2"
+                onClick={() => navigate("/kelas")}
+              >
                 About
               </button>
               <button className="btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2">

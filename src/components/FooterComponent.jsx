@@ -50,6 +50,14 @@ const FooterComponent = () => {
             </div>
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <p className="text-center px-md-0 px-3">
+              &copy; copyright {new Date().getFullYear()} by{" "}
+              <span className="fw-bold">Jodi Jonatan</span>, All Right Reserved
+            </p>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
