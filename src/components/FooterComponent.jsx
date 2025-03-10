@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const FooterComponent = () => {
+const Footer = () => {
   return (
     <div className="footer py-5">
       <Container>
@@ -31,7 +31,7 @@ const FooterComponent = () => {
             <Link to="">Home</Link>
             <Link to="kelas">Kelas</Link>
             <Link to="testimonial">Testimonial</Link>
-            <Link to="foq">FOQ</Link>
+            <Link to="faq">FAQ</Link>
             <Link to="syaratketen">Syarat & Ketentuan</Link>
           </Col>
           <Col lg="4" className="mt-lg-0 mt-5">
@@ -63,4 +63,4 @@ const FooterComponent = () => {
   );
 };
 
-export default FooterComponent;
+export default Footer;
