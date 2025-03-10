@@ -59,7 +59,13 @@ const Home = () => {
           <Row>
             {kelasTerbaru.map((kelas) => {
               return (
-                <Col key={kelas.id} className="shadow-sm rounded">
+                <Col
+                  key={kelas.id}
+                  className="shadow-sm rounded"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  data-aos-delay={kelas.delay}
+                >
                   <img
                     src={kelas.image}
                     alt="unsplash.com"
@@ -87,6 +93,8 @@ const Home = () => {
             <Col className="text-center">
               <button
                 className="btn btn-success rounded-5 btn-lg"
+                data-aos="flip-down"
+                data-aos-duration="1000"
                 onClick={() => navigate("/kelas")}
               >
                 Lihat Semua Kelas{" "}
