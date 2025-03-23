@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import HeroImage from "../assets/img/hero.png";
 
+import { kelasTerbaru, dataSwiper } from "../data/index";
 import { useNavigate } from "react-router-dom";
 import FAQComponent from "../components/FAQComponent";
 
@@ -43,6 +44,38 @@ const Home = () => {
           </Row>
         </Container>
       </header>
+      <div className="kelas w-100 min-vh-100">
+        <Container>
+          <Row>
+            {kelasTerbaru.map((kelas) => {
+              return (
+                <Col
+                  key={kelas.id}
+                  className="shadow-sm rounded"
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                  data-aos-delay={kelas.delay}
+                >
+                  <div className="ket d-flex justify-content-between align-items-center px-3 pb-3"></div>
+                </Col>
+              );
+            })}
+          </Row>
+          <Row>
+            <Col className="text-center">
+              <button
+                className="btn btn-success rounded-5 btn-lg"
+                data-aos="flip-down"
+                data-aos-duration="1000"
+                onClick={() => navigate("/kelas")}
+              >
+                Lihat Semua Kelas{" "}
+                <i className="fa-solid fa-chevron-right ms-1"></i>
+              </button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
       <div className="testimonial py-5">
         <Container>
           <Row>
