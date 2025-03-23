@@ -50,7 +50,7 @@ const NavbarComponent = () => {
 
             <div className="text-center">
               <button className="btn btn-outline-danger rounded-1">
-                Join With Us
+                Contact Me
               </button>
             </div>
           </Navbar.Collapse>

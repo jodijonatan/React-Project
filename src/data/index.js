@@ -21,22 +21,22 @@ export const navLinks = [
   {
     id: 2,
     path: "kelas",
-    text: "Kelas",
+    text: "About",
   },
   {
     id: 3,
     path: "testimonial",
-    text: "Testimonial",
+    text: "Project",
   },
   {
     id: 4,
     path: "faq",
-    text: "FAQ",
+    text: "Services",
   },
   {
     id: 5,
     path: "syaratketen",
-    text: "Syarat & Ketentuan",
+    text: "Blog",
   },
 ];
 
